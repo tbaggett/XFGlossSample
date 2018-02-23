@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage	xmlns="http://xamarin.com/schemas/2014/forms"
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+				x:Class="XFGlossSample.Examples.Views.Xaml.AccessoryTypePage"
+				Title="Xaml Accessory Types"
+				>
+
+	<!--
+	DetailDisclosureButton and DetailButton are disabled until we can access the detail button 
+	tapped method in the table view source for both the ListView (currently not possible) and 
+	TableView (currently possible) classes.
+	-->
+
+	<StackLayout>
+		<Label Text="Cell AccessoryType values set in Xaml:" Margin="10"/>
+		<TableView>
+			<TableView.Root>
+				<TableSection>
+					<TextCell Text="None" xfg:CellGloss.AccessoryType="None" />
+					<TextCell Text="DisclosureIndicator" xfg:CellGloss.AccessoryType="DisclosureIndicator" />
+					<!-- <TextCell Text="DetailDisclosureButton" xfg:CellGloss.AccessoryType="DetailDisclosureButton" /> -->
+					<TextCell Text="Checkmark" xfg:CellGloss.AccessoryType="Checkmark" />
+					<!-- <TextCell Text="DetailButton" xfg:CellGloss.AccessoryType="DetailButton" /> -->
+					<EntryCell Label="EditIndicator" Placeholder="Optional" HorizontalTextAlignment="End" xfg:CellGloss.AccessoryType="EditIndicator" />
+				</TableSection>
+			</TableView.Root>
+		</TableView>
+	</StackLayout>
+	
+</ContentPage>
